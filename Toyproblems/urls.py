@@ -17,5 +17,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^$', 'roman.views.index', name='roman'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^roman/', include('roman.urls')),
+    url(r'^romancode/$', 'roman.views.romancode', name='romancode'),
 ]
