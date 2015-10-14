@@ -7,11 +7,12 @@
 
 <form action="" method="post" accept-charset="utf-8">
     {% csrf_token %}
-    {{ form.as.p }}
+       <p>{{ roman_numeral }}</p>
        <label for="roman_numeral">Enter roman numeral: </label>
        <input id="roman_numeral" type="text" name="roman_numeral">
        <p><input type="submit" value="Convert" name="convert" id="convert"></p>
 </form>
-<p>{{ roman_numeral }}</p>
+<p>The converted number is: {{ roman_numeral }}</p>
+
 </body>
 </html>
